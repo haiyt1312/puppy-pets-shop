@@ -7,7 +7,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
-import com.ictu.entity.CartItem;
+import com.ictu.dto.CartItem;
 import com.ictu.entity.Product;
 import com.ictu.service.ShoppingCartService;
 

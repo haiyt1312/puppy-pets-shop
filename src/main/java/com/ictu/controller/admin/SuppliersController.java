@@ -38,8 +38,6 @@ public class SuppliersController extends CommonController {
 
 	@GetMapping(value = "/admin/suppliers")
 	public String suppliers(Model model, Principal principal) {
-//		Customer customer = customersRepository.FindByEmail(principal.getName()).get();
-//		model.addAttribute("customer", customer);
 		Supplier supplier = new Supplier();
 		model.addAttribute("supplier", supplier);
 

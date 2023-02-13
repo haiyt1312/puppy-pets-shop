@@ -105,6 +105,9 @@
               <p><del>[[${#numbers.formatDecimal(product.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del> [[${#numbers.formatDecimal(product.price - (product.price * product.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</p>
             </div>
             <div class="product-name">
+              <b style="font-family:Montserrat">Khuyến mãi: </b><span style="color: #ff0000;">[[${product.discount}+'%']]</span>
+           </div>
+            <div class="product-name">
              	<b style="font-family:Montserrat">Loại: </b><span style="font-family:Montserrat">[[${product.category.name}]]</span>
             </div>
             <div class="product-name">
@@ -294,7 +297,7 @@
                   <div class="product-price">
                     <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del>  [[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
                     <div class="product-rating">
-                      <i class="fas fa-star"></i><span>5/5</span>
+                      <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6>
                     </div>
                   </div>
                   <div class="product-btn">
@@ -344,7 +347,7 @@
                   <div class="product-price">
                     <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del>  [[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
                     <div class="product-rating">
-                      <i class="fas fa-star"></i><span>5/5</span>
+                      <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6>
                     </div>
                   </div>
                   <div class="product-btn">

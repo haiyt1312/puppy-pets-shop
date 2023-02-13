@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.ictu.entity.Customer;
-import com.ictu.entity.Order;
 import com.ictu.repository.CustomersRepository;
 import com.ictu.repository.OrderRepository;
 import com.ictu.service.ShoppingCartService;
@@ -37,7 +36,7 @@ public class AccountController extends CommonController {
 		Customer customer = customersRepository.FindByEmail(principal.getName()).get();
 		model.addAttribute("customer", customer);
 
-		List<Order> listO2 = orderRepository.findByCustomerId(customer.getCustomerId());
+		List<Object[]> listO2 = orderRepository.orderByCustomerId(customer.getCustomerId());
 		model.addAttribute("orders2", listO2);
 
 		model.addAttribute("totalCartItemWishs", wishListService.getCount());

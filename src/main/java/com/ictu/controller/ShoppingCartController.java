@@ -1,7 +1,6 @@
 package com.ictu.controller;
 
 import java.security.Principal;
-import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 
@@ -11,17 +10,14 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ictu.entity.CartItem;
+import com.ictu.dto.CartItem;
 import com.ictu.entity.Customer;
 import com.ictu.entity.Order;
 import com.ictu.entity.OrderDetail;
@@ -134,6 +130,37 @@ public class ShoppingCartController extends CommonController {
 		return "redirect:/carts";
 	}
 
+	// delete 1 item
+	@SuppressWarnings("unlikely-arg-type")
+	@GetMapping(value = "/deleteToCart")
+	public String delete(@RequestParam("productId") Integer productId, @RequestParam("quantity") Integer quantity,
+			HttpServletRequest request, Model model) {
+		Product product = productRepository.findById(productId).orElse(null);
+
+		Collection<CartItem> cartItems = shoppingCartService.getCartItems();
+		session = request.getSession();
+		if (product != null && quantity > 1) {
+			CartItem item = new CartItem();
+			BeanUtils.copyProperties(product, item);
+			item.setQuantity(-1);
+			item.setProduct(product);
+			item.setProductId(productId);
+			shoppingCartService.add(item);
+			session.setAttribute("cartItems", cartItems);
+		} else {
+			CartItem item = new CartItem();
+			BeanUtils.copyProperties(product, item);
+			item.setProduct(product);
+			cartItems.remove(session);
+			shoppingCartService.remove(item);
+		}
+
+		model.addAttribute("totalCartItemWishs", wishListService.getCount());
+		model.addAttribute("totalCartItems", shoppingCartService.getCount());
+
+		return "redirect:/carts";
+	}
+
 	// show check out
 	@GetMapping(value = "/checkout")
 	public String checkOut(Model model) {
@@ -211,13 +238,6 @@ public class ShoppingCartController extends CommonController {
 		model.addAttribute("totalCartItems", shoppingCartService.getCount());
 
 		return "site/checkout_success";
-	}
-
-	@InitBinder
-	public void initBinder(WebDataBinder binder) {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		sdf.setLenient(true);
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
 	}
 
 }

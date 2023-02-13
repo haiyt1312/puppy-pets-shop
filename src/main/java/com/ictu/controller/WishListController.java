@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ictu.entity.CartItemWish;
+import com.ictu.dto.CartItemWish;
 import com.ictu.entity.Product;
 import com.ictu.repository.ProductRepository;
 import com.ictu.service.ShoppingCartService;

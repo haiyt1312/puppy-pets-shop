@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,23 +31,38 @@ import lombok.NoArgsConstructor;
 public class Product implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "product_id")
 	private Integer productId;
+
+	@Column(name = "name")
 	private String name;
+
+	@Column(name = "image")
 	private String image;
+
+	@Column(name = "price")
 	private Double price;
+
+	@Column(name = "quantity")
 	private Integer quantity;
-	private Double discount;
+
+	@Column(name = "discount")
+	private Integer discount;
+
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dddd")
+	@Column(name = "entered_date")
 	private Date enteredDate;
+
+	@Column(name = "description")
 	private String description;
 
 	@ManyToOne
-	@JoinColumn(name = "categoryId")
+	@JoinColumn(name = "category_id")
 	private Category category;
 
 	@ManyToOne
-	@JoinColumn(name = "supplierId")
+	@JoinColumn(name = "supplier_id")
 	private Supplier supplier;
 
 	@OneToMany(mappedBy = "product")

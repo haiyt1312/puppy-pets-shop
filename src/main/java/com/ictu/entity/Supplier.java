@@ -3,6 +3,7 @@ package com.ictu.entity;
 import java.io.Serializable;
 import java.util.Collection;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -25,9 +26,16 @@ public class Supplier implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Integer id;
+
+	@Column(name = "name")
 	private String name;
+
+	@Column(name = "email")
 	private String email;
+
+	@Column(name = "phone")
 	private String phone;
 	@OneToMany(mappedBy = "supplier", fetch = FetchType.EAGER)
 	private Collection<Product> products;

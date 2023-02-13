@@ -46,7 +46,6 @@ public class LoginOrRegisterController extends CommonController {
 		return "site/loginOrRegister";
 	}
 
-	// register
 	@SuppressWarnings("unused")
 	@RequestMapping(value = "/registered")
 	public String addCourse(@Valid @ModelAttribute("customer") Customer customer, BindingResult result, ModelMap model,
@@ -101,7 +100,7 @@ public class LoginOrRegisterController extends CommonController {
 		return true;
 	}
 
-	// check ID Login
+	// check tên tài khoản
 	public boolean checkIdlogin(String customerId) {
 		List<Customer> listC = customersRepository.findAll();
 		for (Customer c : listC) {

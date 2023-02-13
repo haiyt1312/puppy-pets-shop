@@ -6,7 +6,7 @@ import javax.mail.MessagingException;
 
 import org.springframework.stereotype.Service;
 
-import com.ictu.entity.MailInfo;
+import com.ictu.dto.MailInfo;
 
 @Service
 public interface SendMailService {

@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import org.springframework.stereotype.Service;
 
-import com.ictu.entity.CartItemWish;
+import com.ictu.dto.CartItemWish;
 import com.ictu.entity.Product;
 
 @Service

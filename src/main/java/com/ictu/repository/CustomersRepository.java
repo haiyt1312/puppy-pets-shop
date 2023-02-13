@@ -11,7 +11,7 @@ import com.ictu.entity.Customer;
 @Repository
 public interface CustomersRepository extends JpaRepository<Customer, Integer> {
 
-	@Query(value = "select * from customers where customerId = ?", nativeQuery = true)
+	@Query(value = "select * from customers where customer_id = ?", nativeQuery = true)
 	public Customer findCustomersLogin(String customerId);
 
 	@Query(value = "select * from customers where email = ?", nativeQuery = true)

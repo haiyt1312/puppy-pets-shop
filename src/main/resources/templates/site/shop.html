@@ -90,7 +90,7 @@
                     <div class="product-price">
                       <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
                       <div class="product-rating">
-                        <i class="fas fa-star"></i><span>5/5</span>
+                        <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6>
                       </div>
                     </div>
                     <div class="product-btn">

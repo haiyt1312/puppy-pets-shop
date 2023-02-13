@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -28,11 +29,22 @@ import lombok.NoArgsConstructor;
 public class Customer implements UserDetails, CredentialsContainer {
 
 	@Id
+	@Column(name = "customer_id")
 	private String customerId;
+
+	@Column(name = "password")
 	private String password;
+
+	@Column(name = "fullname")
 	private String fullname;
+
+	@Column(name = "email")
 	private String email;
+
+	@Column(name = "enabled")
 	private Boolean enabled;
+
+	@Column(name = "role_id")
 	private String roleId;
 
 	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)

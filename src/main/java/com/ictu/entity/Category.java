@@ -3,6 +3,7 @@ package com.ictu.entity;
 import java.io.Serializable;
 import java.util.Collection;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -24,8 +25,10 @@ import lombok.NoArgsConstructor;
 public class Category implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "category_id")
 	private Integer categoryId;
 
+	@Column(name = "name")
 	private String name;
 
 	@OneToMany(mappedBy = "category", fetch = FetchType.EAGER)

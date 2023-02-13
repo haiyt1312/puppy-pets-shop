@@ -1,5 +1,6 @@
 package com.ictu.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,11 +21,13 @@ public class Role {
 
 	@Id
 	@GeneratedValue
+	@Column(name = "id")
 	private Integer id;
 
+	@Column(name = "role_name")
 	private String roleName;
 
 	@ManyToOne
-	@JoinColumn(name = "customerId")
+	@JoinColumn(name = "customer_id")
 	private Customer customer;
 }

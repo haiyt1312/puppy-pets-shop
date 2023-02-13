@@ -31,20 +31,31 @@ import lombok.NoArgsConstructor;
 public class Order implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "order_id")
 	private Integer orderId;
+
+	@Column(name = "phone")
 	private String phone;
+
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "MM/dd/yyyy")
+	@Column(name = "order_date")
 	private Date orderDate;
+
+	@Column(name = "receiver")
 	private String receiver;
+
+	@Column(name = "address")
 	private String address;
+
+	@Column(name = "description")
 	private String description;
-//	private Double amount;
+
 	@Column(name = "total_price")
 	private Double totalPrice;
 
 	@ManyToOne
-	@JoinColumn(name = "customerId")
+	@JoinColumn(name = "customer_id")
 	private Customer customer;
 
 	@OneToMany(mappedBy = "order")

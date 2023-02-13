@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.ictu.entity.CartItemWish;
+import com.ictu.dto.CartItemWish;
 import com.ictu.entity.Product;
 import com.ictu.service.WishListService;
 
