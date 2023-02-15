@@ -131,7 +131,6 @@ public class ShoppingCartController extends CommonController {
 	}
 
 	// delete 1 item
-	@SuppressWarnings("unlikely-arg-type")
 	@GetMapping(value = "/deleteToCart")
 	public String delete(@RequestParam("productId") Integer productId, @RequestParam("quantity") Integer quantity,
 			HttpServletRequest request, Model model) {
@@ -147,13 +146,7 @@ public class ShoppingCartController extends CommonController {
 			item.setProductId(productId);
 			shoppingCartService.add(item);
 			session.setAttribute("cartItems", cartItems);
-		} else {
-			CartItem item = new CartItem();
-			BeanUtils.copyProperties(product, item);
-			item.setProduct(product);
-			cartItems.remove(session);
-			shoppingCartService.remove(item);
-		}
+		} 
 
 		model.addAttribute("totalCartItemWishs", wishListService.getCount());
 		model.addAttribute("totalCartItems", shoppingCartService.getCount());

@@ -132,19 +132,18 @@
                 </div>
                 <div class="product-content">
                   <div class="product-name">
-                    <h6><a style="font-family:Montserrat" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.name}]]</a></h6>
+                    <h6><a  href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.name}]]</a></h6>
                   </div>
                   <div class="product-price">
-                    <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')} + '₫']]</del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
-                    <!-- <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')} + '₫']]</del>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6> -->
+                    <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')} + '₫']]</del>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
                     <div class="product-rating">
-                      <!-- <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6> -->
+                      <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6>
                     </div>
                   </div>
                   <div class="product-btn">
                     <a th:href="@{/addToCart(productId=${item.productId})}"
                       ><i class="fas fa-shopping-basket"></i
-                      ><span style="font-family:Montserrat">Thêm vào giỏ hàng</span></a
+                      ><span >Thêm vào giỏ hàng</span></a
                     >
                   </div>
                 </div>
@@ -191,10 +190,10 @@
                 </div>
                 <div class="product-content">
                   <div class="product-name">
-                    <h6><a style="font-family:Montserrat" th:href="@{/productDetail(productId=${item.productId})}">[[${item.name}]]</a></h6>
+                    <h6><a  th:href="@{/productDetail(productId=${item.productId})}">[[${item.name}]]</a></h6>
                   </div>
                   <div class="product-price">
-                    <h6>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
+                    <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')} + '₫']]</del>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
                     <div class="product-rating">
                       <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6>
                     </div>
@@ -202,7 +201,7 @@
                   <div class="product-btn">
                     <a th:href="@{/addToCart(productId=${item.productId})}">
                       <i class="fas fa-shopping-basket"></i>
-                      <span style="font-family:Montserrat">Thêm vào giỏ hàng</span>
+                      <span >Thêm vào giỏ hàng</span>
                     </a>
                   </div>
                 </div>
@@ -249,10 +248,10 @@
                 </div>
                 <div class="product-content">
                   <div class="product-name">
-                    <h6><a style="font-family:Montserrat" th:href="@{/productDetail(productId=${item.productId})}">[[${item.name}]]</a></h6>
+                    <h6><a  th:href="@{/productDetail(productId=${item.productId})}">[[${item.name}]]</a></h6>
                   </div>
                   <div class="product-price">
-                    <h6>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
+                    <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')} + '₫']]</del>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
                     <div class="product-rating">
                       <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6>
                     </div>
@@ -260,7 +259,7 @@
                   <div class="product-btn">
                     <a th:href="@{/addToCart(productId=${item.productId})}"
                       ><i class="fas fa-shopping-basket"></i
-                      ><span style="font-family:Montserrat">Thêm vào giỏ hàng</span></a
+                      ><span >Thêm vào giỏ hàng</span></a
                     >
                   </div>
                 </div>
@@ -270,177 +269,6 @@
         </div>
       </div>
     </section>
-    <section class="section blog-part">
-      <!-- <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-heading">
-              <h2 class="title">Our latest blogs</h2>
-              <a href="blog-list-1.html" class="btn btn-outline"
-                ><i class="fas fa-eye"></i>xem thêm</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-8">
-            <div class="blog-slider slider-arrow">
-              <div class="blog-card">
-                <div class="blog-img">
-                  <img src="images/blog/01.jpg" alt="blog-1" />
-                </div>
-                <div class="blog-content">
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-calendar-alt"></i
-                      ><span>02 feb 2023</span>
-                    </li>
-                    <li>
-                      <i class="far fa-comments"></i><span>6 comments</span>
-                    </li>
-                  </ul>
-                  <div class="blog-text">
-                    <h3>
-                      <a href="#"
-                        >How to Make Your Breakfast Easy and Yummy...</a
-                      >
-                    </h3>
-                  </div>
-                  <div class="read-btn">
-                    <a href="#">read more <i class="fas fa-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-card">
-                <div class="blog-img">
-                  <img src="images/blog/02.jpg" alt="blog-2" />
-                </div>
-                <div class="blog-content">
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-calendar-alt"></i
-                      ><span>02 feb 2023</span>
-                    </li>
-                    <li>
-                      <i class="far fa-comments"></i><span>9 comments</span>
-                    </li>
-                  </ul>
-                  <div class="blog-text">
-                    <h3>
-                      <a href="#"
-                        >How to Make Your Breakfast Easy and Yummy...</a
-                      >
-                    </h3>
-                  </div>
-                  <div class="read-btn">
-                    <a href="#">read more <i class="fas fa-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-card">
-                <div class="blog-img">
-                  <img src="images/blog/03.jpg" alt="blog-3" />
-                </div>
-                <div class="blog-content">
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-calendar-alt"></i
-                      ><span>02 feb 2023</span>
-                    </li>
-                    <li>
-                      <i class="far fa-comments"></i><span>7 comments</span>
-                    </li>
-                  </ul>
-                  <div class="blog-text">
-                    <h3>
-                      <a href="#"
-                        >How to Make Your Breakfast Easy and Yummy...</a
-                      >
-                    </h3>
-                  </div>
-                  <div class="read-btn">
-                    <a href="#">read more <i class="fas fa-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="side-blog">
-              <div class="blog-list">
-                <div class="blog-list-img">
-                  <img src="images/blog/list-1.jpg" alt="blog-list-1" />
-                </div>
-                <div class="blog-list-content">
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-calendar-alt"></i
-                      ><span>02 feb 2023</span>
-                    </li>
-                    <li>
-                      <i class="far fa-comments"></i><span>10 comments</span>
-                    </li>
-                  </ul>
-                  <div class="blog-text">
-                    <h3>
-                      <a href="#"
-                        >How to Make Your Breakfast Easy and Yummy...</a
-                      >
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-list">
-                <div class="blog-list-img">
-                  <img src="images/blog/list-2.jpg" alt="blog-list-2" />
-                </div>
-                <div class="blog-list-content">
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-calendar-alt"></i
-                      ><span>02 feb 2023</span>
-                    </li>
-                    <li>
-                      <i class="far fa-comments"></i><span>22 comments</span>
-                    </li>
-                  </ul>
-                  <div class="blog-text">
-                    <h3>
-                      <a href="#"
-                        >How to Make Your Breakfast Easy and Yummy...</a
-                      >
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-list">
-                <div class="blog-list-img">
-                  <img src="images/blog/list-3.jpg" alt="blog-list-3" />
-                </div>
-                <div class="blog-list-content">
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-calendar-alt"></i
-                      ><span>02 feb 2023</span>
-                    </li>
-                    <li>
-                      <i class="far fa-comments"></i><span>16 comments</span>
-                    </li>
-                  </ul>
-                  <div class="blog-text">
-                    <h3>
-                      <a href="#"
-                        >How to Make Your Breakfast Easy and Yummy...</a
-                      >
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </section>
     <section class="feature-part">
       <div class="container">
         <div class="row">
@@ -448,7 +276,7 @@
             <div class="feature-card">
               <i class="flaticon-delivery-truck"></i>
               <h3>Miễn phí vận chuyển</h3>
-              <p style="font-family:Montserrat">
+              <p >
                 Miễn phí vận chuyển với mọi đơn hàng
               </p>
             </div>
@@ -457,7 +285,7 @@
             <div class="feature-card">
               <i class="flaticon-save-money"></i>
               <h3>Thanh toán nhanh</h3>
-              <p style="font-family:Montserrat">
+              <p >
                 100% thanh toán an toàn
               </p>
             </div>
@@ -466,7 +294,7 @@
             <div class="feature-card">
               <i class="flaticon-customer-service"></i>
               <h3>Hỗ trợ nhanh</h3>
-              <p style="font-family:Montserrat">
+              <p >
                 Chăm sóc khách hàng 24/7
               </p>
             </div>
@@ -485,7 +313,7 @@
               <input type="text" placeholder="Email" /><button
                 class="btn btn-inline"
               >
-                <i class="fas fa-envelope"></i><span style="font-family:Montserrat">Đăng ký</span>
+                <i class="fas fa-envelope"></i><span >Đăng ký</span>
               </button>
             </form>
           </div>
@@ -495,31 +323,6 @@
     
     <!-- Footer -->
     <footer th:replace="~{/fragments/footer :: footer}"></footer>
-    
-    <div class="footer-bottom">
-      <div class="container">
-        <p>
-          Copyright &copy; 2023 | All rights reserved by -
-          <a target="_blank" href="#"
-            >Puppy Pets Shop</a
-          >
-        </p>
-        <ul class="pay-card">
-          <li>
-            <a href="#"><img src="images/pay-card/01.jpg" alt="payment-1" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/pay-card/02.jpg" alt="payment-2" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/pay-card/03.jpg" alt="payment-3" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/pay-card/04.jpg" alt="payment-4" /></a>
-          </li>
-        </ul>
-      </div>
-    </div>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/vendor/popper.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>

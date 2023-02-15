@@ -12,14 +12,14 @@
   color: var(--graycolor);
 }
 .breadcrumb li a:hover {
-  color: #ed6436;
+  color: var(--color);
   text-decoration: underline;
 }
 .breadcrumb .active {
-  color: #ed6436;
+  color: var(--color);
 }
 .breadcrumb-item + .breadcrumb-item::before {
-  color: #ed6436;
+  color: var(--color);
 }
 .single-banner {
   background: url(../../images/banner/banner4.svg);
@@ -75,7 +75,7 @@
   letter-spacing: -10px;
   margin-bottom: 25px;
   font-family: var(--pfamily);
-  color: #ed6436;
+  color: var(--color);
 }
 .error h2 {
   font-size: 35px;

@@ -14,9 +14,9 @@
 							<img src="images/logo.png" alt="logo" />
 						</a>
 						<form th:action="@{/searchProduct}" class="search-form navbar-src">
-							<input type="text" name="keyword" th:value="${keyword}" placeholder="Tìm kiếm thông tin tại đây" style="font-family:Montserrat"/>
+							<input type="text" name="keyword" th:value="${keyword}" placeholder="Tìm kiếm thông tin tại đây" />
 							<button class="btn btn-inline">
-								<i class="fas fa-search"></i><span style="font-family:Montserrat">Tìm kiếm</span>
+								<i class="fas fa-search"></i><span >Tìm kiếm</span>
 							</button>
 						</form>
 						<ul class="right-widget">
@@ -27,12 +27,12 @@
 								</a>
 								<ul class="dropdown-list">	
 									<li>
-										<a class="dropdown-link" th:href="@{/account}" style="font-family:Montserrat">
+										<a class="dropdown-link" th:href="@{/account}" >
 											Thông tin người dùng
 										</a>
 									</li>
 									<li>
-										<a class="dropdown-link" th:href="@{/logout}" style="font-family:Montserrat">
+										<a class="dropdown-link" th:href="@{/logout}" >
 											Đăng xuất
 										</a>
 									</li>
@@ -61,32 +61,32 @@
 						<div class="navbar-content">
 							<ul class="navbar-list">
 								<li class="navbar-item active">
-									<a style="font-family:Montserrat" class="navbar-link" th:href="@{/}">Trang chủ</a>
+									<a  class="navbar-link" th:href="@{/}">Trang chủ</a>
 								</li>
 								<li class="navbar-item">
-									<a style="font-family:Montserrat" class="navbar-link" th:href="@{/products}">Tất cả sản phẩm</a>
+									<a  class="navbar-link" th:href="@{/products}">Tất cả sản phẩm</a>
 								</li>
 								<li class="navbar-item navbar-dropdown">
-			                    	<a style="font-family:Montserrat" class="navbar-link dropdown-indicator" href="#">
+			                    	<a  class="navbar-link dropdown-indicator" href="#">
 			                      		<span>Danh mục sản phẩm</span>
 			                      		<i class="fas fa-chevron-down"></i>
 			                    	</a>
 				                    <ul class="dropdown-list">
 				                      <li th:each="item : ${categoryList}">
-				                        <a class="dropdown-link" th:href="@{/productByCategory(categoryId=${item.categoryId})}" style="font-family:Montserrat">
+				                        <a class="dropdown-link" th:href="@{/productByCategory(categoryId=${item.categoryId})}" >
 			                          		[[${item.name}]]
 				                        </a>
 				                      </li>
 				                    </ul>
 			                 	 </li>
 			                  <li class="navbar-item navbar-dropdown">
-			                    <a style="font-family:Montserrat" class="navbar-link dropdown-indicator" href="#" >
+			                    <a  class="navbar-link dropdown-indicator" href="#" >
 			                      <span>Thương hiệu</span>
 			                      <i class="fas fa-chevron-down"></i>
 			                    </a>
 			                    <ul class="dropdown-list">
 			                      <li th:each="item : ${supplierList}">
-			                        <a class="dropdown-link" th:href="@{/productBySupplier(supplierId=${item.id})}" style="font-family:Montserrat">
+			                        <a class="dropdown-link" th:href="@{/productBySupplier(supplierId=${item.id})}" >
 			                          [[${item.name}]]
 			                        </a>
 			                      </li>
@@ -94,11 +94,11 @@
 			                  </li>
 			                  	<th:block th:unless="${#request.remoteUser}">
 			                  	<li class="navbar-item">
-									<a style="font-family:Montserrat" class="navbar-link" th:href="@{/login}">Đăng nhập & Đăng ký</a>
+									<a  class="navbar-link" th:href="@{/login}">Đăng nhập & Đăng ký</a>
 								</li>
 								</th:block>
 								<li class="navbar-item">
-									<a style="font-family:Montserrat" class="navbar-link" th:href="@{/contact}">Liên hệ</a>
+									<a  class="navbar-link" th:href="@{/contact}">Liên hệ</a>
 								</li>
 							</ul>
 						</div>

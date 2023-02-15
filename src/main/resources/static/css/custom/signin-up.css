@@ -28,9 +28,9 @@
     border-color:transparent
 }
 .nav-tabs li .active{
-    color:#ed6436 !important;
+    color:var(--color) !important;
     background:var(--navbarcolor) !important;
-    border-color:#ed6436 !important
+    border-color:var(--color) !important
 }
 .tab-pane{
     display:none;
@@ -121,13 +121,13 @@
     border-radius:3px;
     font-size:16px;
     color:var(--whitecolor);
-    background:#ed6436;
+    background:var(--color);
     text-shadow:var(--tshadow);
     -webkit-box-shadow:var(--bshadow);
     box-shadow:var(--bshadow)
 }
 .back-arrow a i:hover{
-    color:#ed6436;
+    color:var(--color);
     background:var(--whitecolor)
 }
 .sign-cate{
@@ -175,7 +175,7 @@
     -o-transition:all linear .3s
 }
 .form-label input:focus-within{
-    border:1px solid #ed6436
+    border:1px solid var(--color)
 }
 .form-label button{
     border:none;
@@ -202,7 +202,7 @@
     font-weight:500
 }
 .form-suggest p a:hover{
-    color:#ed6436;
+    color:var(--color);
     text-decoration:underline
 }
 .form-btn{
@@ -310,7 +310,7 @@
     color:var(--textcolor)
 }
 .form-link a:hover{
-    color:#ed6436;
+    color:var(--color);
     text-decoration:underline
 }
 .form-link .custom-control-label{
@@ -318,4 +318,4 @@
     line-height:26px;
     cursor:pointer
 }
-.form-link .custom-control-label::before{top:5px}.form-link .custom-control-label::after{top:5px}.form-link .custom-control-input:checked ~ .custom-control-label::before{border-color:#ff5644;background-color:#ff5644}.form-bottom{text-align:center;margin-bottom:50px}.form-bottom p{color:#666666;font-size:18px;width:290px;margin:0 auto}.form-bottom p span{font-weight:500;color:#ed6436}@media (max-width: 767px){.sign-form{width:100%}.sign-form .tab-pane{padding:0px 25px}.form-option li a{width:auto}.form-option li a i{width:60px;margin-right:0px}.form-option li a span{display:none}}@media (max-width: 575px){.sign-content{display:none}.back-arrow{position:inherit;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:15px}.back-arrow a:nth-child(1){display:block}.back-arrow a img{width:155px}.back-arrow a i{width:40px;height:40px;line-height:40px;color:#ed6436;background:var(--whitecolor)}.back-arrow a i:hover{color:var(--whitecolor);background:#ed6436}.form-bottom p{width:100%}}@media (min-width: 576px) and (max-width: 1199px){.sign-content{width:45%}.content-cover{width:235px}.content-cover a img{width:150px}.content-cover h1{font-size:24px;line-height:32px}.content-cover p{font-size:18px}.sign-form{width:55%}.sign-form .tab-pane{padding:0px 25px}.form-bottom p{width:260px}}
+.form-link .custom-control-label::before{top:5px}.form-link .custom-control-label::after{top:5px}.form-link .custom-control-input:checked ~ .custom-control-label::before{border-color:#ff5644;background-color:#ff5644}.form-bottom{text-align:center;margin-bottom:50px}.form-bottom p{color:#666666;font-size:18px;width:290px;margin:0 auto}.form-bottom p span{font-weight:500;color:var(--color)}@media (max-width: 767px){.sign-form{width:100%}.sign-form .tab-pane{padding:0px 25px}.form-option li a{width:auto}.form-option li a i{width:60px;margin-right:0px}.form-option li a span{display:none}}@media (max-width: 575px){.sign-content{display:none}.back-arrow{position:inherit;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:15px}.back-arrow a:nth-child(1){display:block}.back-arrow a img{width:155px}.back-arrow a i{width:40px;height:40px;line-height:40px;color:var(--color);background:var(--whitecolor)}.back-arrow a i:hover{color:var(--whitecolor);background:var(--color)}.form-bottom p{width:100%}}@media (min-width: 576px) and (max-width: 1199px){.sign-content{width:45%}.content-cover{width:235px}.content-cover a img{width:150px}.content-cover h1{font-size:24px;line-height:32px}.content-cover p{font-size:18px}.sign-form{width:55%}.sign-form .tab-pane{padding:0px 25px}.form-bottom p{width:260px}}

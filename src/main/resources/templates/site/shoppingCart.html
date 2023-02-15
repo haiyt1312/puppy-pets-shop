@@ -62,11 +62,11 @@
                 <thead>
                   <tr>
 					          <th scope="col">#</th>
-                    <th scope="col" style="font-family:Montserrat">Sản phẩm</th>
-                    <th scope="col" style="font-family:Montserrat">Tên</th>
-                    <th scope="col" style="font-family:Montserrat">Giá</th>
-                    <th scope="col" style="font-family:Montserrat">Số lượng</th>
-                    <th scope="col" style="font-family:Montserrat">Tổng</th>
+                    <th scope="col" >Sản phẩm</th>
+                    <th scope="col" >Tên</th>
+                    <th scope="col" >Giá</th>
+                    <th scope="col" >Số lượng</th>
+                    <th scope="col" >Tổng</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -76,12 +76,12 @@
                     <td class="table-product">
                       <img th:src="@{'/loadImage?imageName='+${item.product.image}}" alt="product" />
                     </td>
-                    <td class="table-name"><h5 style="font-family:Montserrat">[[${item.product.name}]]</h5></td>
+                    <td class="table-name"><h5 >[[${item.product.name}]]</h5></td>
                     <td class="table-price"><h5>[[ ${#numbers.formatDecimal(item.product.price - (item.product.price * item.product.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h5></td>
                     <td class="table-action" style="color: black; font-weight: bold;">
-                      <a th:href="@{/addToCart(productId=${item.productId})}" style="color: #ed6436;"><i class="fas fa-angle-up"></i></a>
+                      <a th:href="@{/addToCart(productId=${item.productId})}" style="color: var(--color);"><i class="fas fa-angle-up"></i></a>
                       <h5>[[${item.quantity}]]</h5>
-                      <a th:href="@{/deleteToCart(productId=${item.productId},quantity=${item.quantity})}" style="color: #ed6436;"><i class="fas fa-angle-down"></i></a>
+                      <a th:href="@{/deleteToCart(productId=${item.productId},quantity=${item.quantity})}" style="color: var(--color);"><i class="fas fa-angle-down"></i></a>
                     </td>
                     <td class="table-total"><h5>[[${#numbers.formatDecimal((item.product.price - (item.product.price * item.product.discount/100)) * item.quantity, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h5></td>
                     <td class="table-action">
@@ -132,7 +132,7 @@
           <div class="col-md-6 col-lg-6">
             <div class="cart-back">
               <a th:href="@{/products}" class="btn btn-inline"
-                ><i class="fas fa-undo-alt"></i><span style="font-family:Montserrat">Quay lại</span></a
+                ><i class="fas fa-undo-alt"></i><span >Quay lại</span></a
               >
             </div>
           </div>
@@ -148,7 +148,7 @@
             </div>
             <div class="cart-proceed">
               <a th:href="@{/checkout}" class="btn btn-inline"
-                ><i class="fas fa-check"></i><span style="font-family:Montserrat">Thanh toán</span></a
+                ><i class="fas fa-check"></i><span >Thanh toán</span></a
               >
             </div>
           </div>
@@ -166,7 +166,7 @@
               <input type="text" placeholder="Email" /><button
                 class="btn btn-inline"
               >
-                <i class="fas fa-envelope"></i><span style="font-family:Montserrat">Đăng ký</span>
+                <i class="fas fa-envelope"></i><span >Đăng ký</span>
               </button>
             </form>
           </div>

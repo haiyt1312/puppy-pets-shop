@@ -12,14 +12,14 @@
   color: var(--graycolor);
 }
 .breadcrumb li a:hover {
-  color: #ed6436;
+  color: var(--color);
   text-decoration: underline;
 }
 .breadcrumb .active {
-  color: #ed6436;
+  color: var(--color);
 }
 .breadcrumb-item + .breadcrumb-item::before {
-  color: #ed6436;
+  color: var(--color);
 }
 .pagination {
   -webkit-box-align: center;
@@ -41,7 +41,7 @@
 }
 .page-item .active {
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
 }
 .page-link {
   width: 40px;
@@ -56,7 +56,7 @@
 }
 .page-link:hover {
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
 }
 .page-link:focus {
   -webkit-box-shadow: none;
@@ -104,7 +104,7 @@
   width: 60px;
   height: 2px;
   border-radius: 30px;
-  background: #ed6436;
+  background: var(--color);
 }
 .title::after {
   position: absolute;
@@ -116,7 +116,7 @@
   width: 35px;
   height: 2px;
   border-radius: 30px;
-  background: #ed6436;
+  background: var(--color);
 }
 @media (max-width: 767px) {
   .section {
@@ -154,7 +154,7 @@
   margin-bottom: 30px;
 }
 .blog-card:hover .blog-text h3 a {
-  color: #ed6436;
+  color: var(--color);
 }
 .blog-card:hover .blog-img::before {
   background: rgba(0, 0, 0, 0.15);
@@ -255,7 +255,7 @@
   -o-transition: all linear 0.3s;
 }
 .read-btn a:hover {
-  color: #ed6436;
+  color: var(--color);
 }
 .read-btn a:hover i {
   margin-left: 10px;
@@ -424,7 +424,7 @@
   position: absolute;
   top: 15px;
   left: 15px;
-  color: #ed6436;
+  color: var(--color);
 }
 .sidebar-blog .title {
   display: inline-block;
@@ -447,10 +447,10 @@
   padding-bottom: 18px;
 }
 .sidebar-cate li:hover h6 a {
-  color: #ed6436;
+  color: var(--color);
 }
 .sidebar-cate li:hover p {
-  background: #ed6436;
+  background: var(--color);
 }
 .sidebar-cate li h6 {
   font-weight: 500;
@@ -498,8 +498,8 @@
 }
 .sidebar-tag li a:hover {
   color: var(--whitecolor);
-  background: #ed6436;
-  border-color: #ed6436;
+  background: var(--color);
+  border-color: var(--color);
 }
 .sidebar-icon {
   display: -webkit-box;
@@ -639,7 +639,7 @@
 .details-quote {
   padding: 50px 50px;
   background: var(--navbarcolor);
-  border-left: 5px solid #ed6436;
+  border-left: 5px solid var(--color);
   margin-bottom: 45px;
   border-radius: 10px;
   display: -webkit-box;
@@ -704,8 +704,8 @@
 }
 .blogdet-tag ul li a:hover {
   color: var(--whitecolor);
-  background: #ed6436;
-  border-color: #ed6436;
+  background: var(--color);
+  border-color: var(--color);
 }
 .blogdet-icon {
   display: -webkit-box;
@@ -782,7 +782,7 @@
   text-transform: capitalize;
 }
 .comment-reply a:hover {
-  color: #ed6436;
+  color: var(--color);
 }
 .comment-reply a i {
   margin-right: 8px;

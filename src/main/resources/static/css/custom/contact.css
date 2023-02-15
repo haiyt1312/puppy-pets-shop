@@ -12,14 +12,14 @@
   color: var(--graycolor);
 }
 .breadcrumb li a:hover {
-  color: #ed6436;
+  color: var(--color);
   text-decoration: underline;
 }
 .breadcrumb .active {
-  color: #ed6436;
+  color: var(--color);
 }
 .breadcrumb-item + .breadcrumb-item::before {
-  color: #ed6436;
+  color: var(--color);
 }
 .section {
   padding: 100px 0px 0px;
@@ -52,7 +52,7 @@
   width: 60px;
   height: 2px;
   border-radius: 30px;
-  background: #ed6436;
+  background: var(--color);
 }
 .title::after {
   position: absolute;
@@ -64,7 +64,7 @@
   width: 35px;
   height: 2px;
   border-radius: 30px;
-  background: #ed6436;
+  background: var(--color);
 }
 @media (max-width: 767px) {
   .section {
@@ -163,7 +163,7 @@
 }
 .contact-info i {
   font-size: 50px;
-  color: #ed6436;
+  color: var(--color);
   margin-bottom: 25px;
 }
 .contact-info .title {
@@ -199,11 +199,11 @@
 }
 .contact-label:focus-within input,
 .contact-label:focus-within textarea {
-  border: 1px solid #ed6436;
+  border: 1px solid var(--color);
 }
 .contact-label:focus-within i {
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
 }
 .contact-label input,
 .contact-label textarea {
@@ -233,7 +233,7 @@
   line-height: 50px;
   text-align: center;
   border-radius: 3px 0px 0px 3px;
-  color: #ed6436;
+  color: var(--color);
   background: var(--navbarcolor);
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;

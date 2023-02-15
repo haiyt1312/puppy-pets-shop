@@ -90,7 +90,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-6">
-            <div class="product-name"><h3 style="font-family:Montserrat">[[${product.name}]]</h3></div>
+            <div class="product-name"><h3 >[[${product.name}]]</h3></div>
             <div class="product-review">
               <ul>
                 <li><i class="fas fa-star"></i></li>
@@ -105,23 +105,23 @@
               <p><del>[[${#numbers.formatDecimal(product.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del> [[${#numbers.formatDecimal(product.price - (product.price * product.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</p>
             </div>
             <div class="product-name">
-              <b style="font-family:Montserrat">Khuyến mãi: </b><span style="color: #ff0000;">[[${product.discount}+'%']]</span>
+              <b >Khuyến mãi: </b><span style="color: #ff0000;">[[${product.discount}+'%']]</span>
            </div>
             <div class="product-name">
-             	<b style="font-family:Montserrat">Loại: </b><span style="font-family:Montserrat">[[${product.category.name}]]</span>
+             	<b >Loại: </b><span >[[${product.category.name}]]</span>
             </div>
             <div class="product-name">
-             	<b style="font-family:Montserrat">Thương hiệu: </b><span style="font-family:Montserrat">[[${product.supplier.name}]]</span>
+             	<b >Thương hiệu: </b><span >[[${product.supplier.name}]]</span>
             </div>
             <div class="product-name">
-             	<b style="font-family:Montserrat">Số lượng trong kho: </b><span style="font-family:Montserrat">([[${product.quantity}]]) sản phẩm</span>
+             	<b >Số lượng trong kho: </b><span >([[${product.quantity}]]) sản phẩm</span>
             </div>
             <div class="product-cart">
               <ul>
                 <li>
                   <a th:href="@{/addToCart(productId=${product.productId})}" class="btn btn-outline"
                     ><i class="fas fa-shopping-basket"></i
-                    ><span style="font-family:Montserrat">Thêm vào giỏ hàng</span></a
+                    ><span >Thêm vào giỏ hàng</span></a
                   >
                 </li>
                 <li>
@@ -132,7 +132,7 @@
               </ul>
             </div>
             <div class="product-payment">
-              <h5 style="font-family:Montserrat">Thanh toán:</h5>
+              <h5 >Thanh toán:</h5>
               <ul>
                 <li>
                   <a href="#"
@@ -157,7 +157,7 @@
               </ul>
             </div>
             <div class="product-share">
-              <h5 style="font-family:Montserrat">Chia sẻ:</h5>
+              <h5 >Chia sẻ:</h5>
               <ul>
                 <li>
                   <a class="icon icon-inline" href="#"
@@ -187,7 +187,7 @@
               </ul>
             </div>
             <div class="product-contact">
-              <p style="font-family:Montserrat">Có bất kỳ câu hỏi về sản phẩm này</p>
+              <p >Có bất kỳ câu hỏi về sản phẩm này</p>
               <h4><i class="fas fa-phone-alt"></i>0989668899</h4>
             </div>
           </div>
@@ -201,7 +201,7 @@
             <div class="product-info-content">
               <h2>Mô tả</h2>
               <div class="product-tab-desc">
-                <p style="font-family:Montserrat">
+                <p >
                   [[${product.description}]]
                 </p>
               </div>
@@ -230,7 +230,7 @@
                       <li><i class="fas fa-star active"></i></li>
                       <li><i class="fas fa-star active"></i></li>
                     </ul>
-                    <p style="font-family:Montserrat">
+                    <p >
                       Sản phẩm rất tuyệt vời!
                     </p>
                   </div>
@@ -252,7 +252,7 @@
                       <li><i class="fas fa-star active"></i></li>
                       <li><i class="fas fa-star active"></i></li>
                     </ul>
-                    <p style="font-family:Montserrat">
+                    <p >
                       Tôi rất hài lòng về sản phẩm!
                     </p>
                   </div>
@@ -292,10 +292,10 @@
                 </div>
                 <div class="product-content">
                   <div class="product-name">
-                    <h6><a th:href="@{/productDetail(productId=${item.productId})}" style="font-family:Montserrat">[[${item.name}]]</a></h6>
+                    <h6><a th:href="@{/productDetail(productId=${item.productId})}" >[[${item.name}]]</a></h6>
                   </div>
                   <div class="product-price">
-                    <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del>  [[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
+                    <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
                     <div class="product-rating">
                       <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6>
                     </div>
@@ -303,7 +303,7 @@
                   <div class="product-btn">
                     <a th:href="@{/addToCart(productId=${item.productId})}"
                       ><i class="fas fa-shopping-basket"></i
-                      ><span style="font-family:Montserrat">Thêm vào giỏ hàng</span></a
+                      ><span >Thêm vào giỏ hàng</span></a
                     >
                   </div>
                 </div>
@@ -342,10 +342,10 @@
                 </div>
                 <div class="product-content">
                   <div class="product-name">
-                    <h6><a href="#" style="font-family:Montserrat">[[${item.name}]]</a></h6>
+                    <h6><a href="#" >[[${item.name}]]</a></h6>
                   </div>
                   <div class="product-price">
-                    <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del>  [[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
+                    <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
                     <div class="product-rating">
                       <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6>
                     </div>
@@ -353,7 +353,7 @@
                   <div class="product-btn">
                     <a th:href="@{/addToCart(productId=${item.productId})}"
                       ><i class="fas fa-shopping-basket"></i
-                      ><span style="font-family:Montserrat">Thêm vào giỏ hàng</span></a
+                      ><span >Thêm vào giỏ hàng</span></a
                     >
                   </div>
                 </div>
@@ -374,7 +374,7 @@
               <input type="text" placeholder="Email" /><button
                 class="btn btn-inline"
               >
-                <i class="fas fa-envelope"></i><span style="font-family:Montserrat">Đăng ký</span>
+                <i class="fas fa-envelope"></i><span >Đăng ký</span>
               </button>
             </form>
           </div>

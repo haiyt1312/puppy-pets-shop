@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&amp;display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&amp;display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&amp;display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Oxygen:wght@400;700&display=swap');
 :root {
   --h1size: 50px;
   --h2size: 28px;
@@ -14,8 +15,8 @@
   --bweight: 700;
   --eweight: 800;
   --bcweight: 900;
-  --pfamily: "Heebo", sans-serif;
-  --sfamily: "Playfair Display", serif;
+  --pfamily: "Montserrat", sans-serif;
+  --sfamily: "Montserrat", sans-serif;
   --textcolor: #555555;
   --brandcolor: #49a010;
   --whitecolor: #ffffff;
@@ -28,6 +29,7 @@
   --starcolor: #ffcc23;
   --removecolor: #ff3838;
   --brandlight: #65ff00;
+  --color: #ed6436;
   --bshadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
   --bcardshadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
   --biconshadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
@@ -174,7 +176,7 @@ button:focus {
   cursor: pointer;
 }
 .product-short-select:focus {
-  border-color: #ed6436;
+  border-color: var(--color);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -217,7 +219,7 @@ button:focus {
   visibility: hidden;
   border-radius: 3px;
   background: var(--whitecolor);
-  border-top: 2px solid #ed6436;
+  border-top: 2px solid var(--color);
   -webkit-box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
   transition: all linear 0.3s;
@@ -246,7 +248,7 @@ button:focus {
 }
 .dropdown-link:hover {
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
 }
 @media (max-width: 767px) {
   .navbar-dropdown {
@@ -311,7 +313,7 @@ button:focus {
   -o-transition: all linear 0.3s;
 }
 .nasted-dropdown li a:hover {
-  color: #ed6436;
+  color: var(--color);
 }
 .nasted-dropdown li a i {
   font-size: 12px;
@@ -362,7 +364,7 @@ button:focus {
   border-radius: 3px;
   padding: 15px 15px;
   background: var(--whitecolor);
-  border-top: 2px solid #ed6436;
+  border-top: 2px solid var(--color);
   -webkit-box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
   transition: all linear 0.3s;
@@ -411,7 +413,7 @@ button:focus {
   -o-transition: all linear 0.3s;
 }
 .megamenu ul li a:hover {
-  background: #ed6436;
+  background: var(--color);
 }
 .megamenu ul li a:hover i,
 .megamenu ul li a:hover span {
@@ -421,7 +423,7 @@ button:focus {
   font-size: 30px;
   border-radius: 3px;
   display: inline-block;
-  color: #ed6436;
+  color: var(--color);
   margin-right: 12px;
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
@@ -476,7 +478,7 @@ button:focus {
   }
   .megamenu ul li a:hover i,
   .megamenu ul li a:hover span {
-    color: #ed6436;
+    color: var(--color);
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -499,7 +501,7 @@ button:focus {
   padding: 13px 32px;
   letter-spacing: 0.5px;
   border-radius: 3px;
-  border: 2px solid #ed6436;
+  border: 2px solid var(--color);
 }
 .btn:focus {
   -webkit-box-shadow: none !important;
@@ -510,19 +512,19 @@ button:focus {
 }
 .btn-inline {
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
 }
 .btn-inline:hover {
-  color: #ed6436;
+  color: var(--color);
   background: var(--whitecolor);
 }
 .btn-outline {
-  color: #ed6436;
+  color: var(--color);
   background: var(--whitecolor);
 }
 .btn-outline:hover {
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
 }
 .search-form {
   width: 100%;
@@ -610,7 +612,7 @@ button:focus {
   border: 1px solid var(--bordercolor);
 }
 .grid-input input:focus-within {
-  border-color: #ed6436;
+  border-color: var(--color);
 }
 .row-input {
   margin: 0px 15px 20px;
@@ -624,7 +626,7 @@ button:focus {
   border: 1px solid var(--bordercolor);
 }
 .row-input input:focus-within {
-  border-color: #ed6436;
+  border-color: var(--color);
 }
 .row-input textarea {
   width: 100%;
@@ -635,7 +637,7 @@ button:focus {
   border: 1px solid var(--bordercolor);
 }
 .row-input textarea:focus-within {
-  border-color: #ed6436;
+  border-color: var(--color);
 }
 .review-rating {
   margin: 0px 15px 30px;
@@ -704,7 +706,7 @@ button:focus {
 }
 .form-control:focus-within {
   background: var(--whitecolor);
-  border-color: #ed6436;
+  border-color: var(--color);
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: 0;
@@ -740,7 +742,7 @@ button:focus {
 }
 .icon-inline:hover {
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
 }
 @media (max-width: 767px) {
   .icon {
@@ -776,7 +778,7 @@ button:focus {
   display: none;
 }
 .slider-dots ul li.slick-active {
-  background: #ed6436;
+  background: var(--color);
 }
 .dandik,
 .bamdik {
@@ -790,7 +792,7 @@ button:focus {
   line-height: 45px;
   text-align: center;
   border-radius: 3px;
-  color: #ed6436;
+  color: var(--color);
   background: var(--whitecolor);
   text-shadow: var(--tshadow);
   -webkit-box-shadow: var(--bshadow);
@@ -808,7 +810,7 @@ button:focus {
 .dandik:hover,
 .bamdik:hover {
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
 }
 .dandik {
   right: -10px;
@@ -855,7 +857,7 @@ button:focus {
   width: 60px;
   height: 2px;
   border-radius: 30px;
-  background: #ed6436;
+  background: var(--color);
 }
 .title::after {
   position: absolute;
@@ -867,7 +869,7 @@ button:focus {
   width: 35px;
   height: 2px;
   border-radius: 30px;
-  background: #ed6436;
+  background: var(--color);
 }
 @media (max-width: 767px) {
   .section {
@@ -1045,7 +1047,7 @@ button:focus {
   padding: 0px 5px;
   border-radius: 30px;
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
   text-shadow: var(--tshadow);
 }
 .navbar-slide {
@@ -1088,10 +1090,10 @@ button:focus {
   -o-transition: all linear 0.3s;
 }
 .navbar-link:hover {
-  color: #ed6436;
+  color: var(--color);
 }
 .navbar-item.active .navbar-link {
-  color: #ed6436;
+  color: var(--color);
 }
 @media (max-width: 767px) {
   .navbar-element {
@@ -1290,10 +1292,10 @@ button:focus {
   background: var(--graycolor);
 }
 .btmbar-widget li a:hover i {
-  color: #ed6436;
+  color: var(--color);
 }
 .btmbar-widget li a:hover span {
-  color: #ed6436;
+  color: var(--color);
 }
 .btmbar-widget li a i {
   color: var(--textcolor);
@@ -1313,7 +1315,7 @@ button:focus {
   line-height: 18px;
   padding: 0px 5px;
   border-radius: 30px;
-  background: #ed6436;
+  background: var(--color);
   color: var(--whitecolor);
   font-size: 12px;
   text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
@@ -1446,10 +1448,10 @@ button:focus {
   width: 15px;
   height: 2px;
   border-radius: 30px;
-  background: #ed6436;
+  background: var(--color);
 }
 .footer-widget ul li a:hover {
-  color: #ed6436;
+  color: var(--color);
   text-decoration: underline;
 }
 .download-app {
@@ -1549,6 +1551,8 @@ button:focus {
 .footer-bottom {
   padding: 15px 0px;
   background: #ffa07a;
+  margin-top: 65px;
+  margin-bottom: -100px;
 }
 .footer-bottom .container {
   display: -webkit-box;
@@ -1597,4 +1601,7 @@ button:focus {
   .footer-bottom .container p {
     margin-bottom: 15px;
   }
+}
+.best-part{
+  margin-bottom: 100px;
 }

@@ -14,16 +14,16 @@
 }
 
 .breadcrumb li a:hover {
-    color: #ed6436;
+    color: var(--color);
     text-decoration: underline
 }
 
 .breadcrumb .active {
-    color: #ed6436
+    color: var(--color)
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
-    color: #ed6436
+    color: var(--color)
 }
 
 .nav {
@@ -62,9 +62,9 @@
 }
 
 .nav-tabs li .active {
-    color: #ed6436 !important;
+    color: var(--color) !important;
     background: var(--navbarcolor) !important;
-    border-color: #ed6436 !important
+    border-color: var(--color) !important
 }
 
 .tab-pane {
@@ -171,7 +171,7 @@
     width: 60px;
     height: 2px;
     border-radius: 30px;
-    background: #ed6436
+    background: var(--color)
 }
 
 .title::after {
@@ -184,7 +184,7 @@
     width: 35px;
     height: 2px;
     border-radius: 30px;
-    background: #ed6436
+    background: var(--color)
 }
 
 @media (max-width: 767px) {
@@ -242,7 +242,7 @@
 }
 
 .product-card:hover .product-name h6 a {
-    color: #ed6436
+    color: var(--color)
 }
 
 .product-img {
@@ -294,7 +294,7 @@
     text-align: center;
     border-radius: 3px;
     color: var(--whitecolor);
-    background: #ed6436;
+    background: var(--color);
     text-shadow: var(-tshadow);
     -webkit-box-shadow: var(--biconshadow);
     box-shadow: var(--biconshadow)
@@ -336,7 +336,7 @@
 }
 
 .product-price h6 del {
-    color: #ed6436;
+    color: var(--color);
     font-size: 16px;
     margin-right: 5px;
 }
@@ -384,8 +384,8 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #ed6436;
-    border: 1px solid #ed6436;
+    color: var(--color);
+    border: 1px solid var(--color);
     text-shadow: var(--tshadow);
     transition: all linear .3s;
     -webkit-transition: all linear .3s;
@@ -396,7 +396,7 @@
 
 .product-btn a:hover {
     color: var(--whitecolor);
-    background: #ed6436
+    background: var(--color)
 }
 
 .product-btn i {
@@ -491,7 +491,7 @@
 }
 
 .thumb-slider .slick-center {
-    border: 2px solid #ed6436
+    border: 2px solid var(--color)
 }
 
 .product-name {
@@ -522,7 +522,7 @@
 }
 
 .product-review ul li a:hover {
-    color: #ed6436;
+    color: var(--color);
     text-decoration: underline
 }
 
@@ -539,7 +539,7 @@
 
 .product-price p del {
     font-size: 18px;
-    color: #ed6436
+    color: var(--color)
 }
 
 .product-summery {
@@ -566,7 +566,7 @@
 }
 
 .product-cart ul li input:focus-within {
-    border-color: #ed6436
+    border-color: var(--color)
 }
 
 .product-cart ul li .btn {
@@ -581,15 +581,15 @@
 }
 
 .product-cart ul li .icon-outline {
-    color: #ed6436;
+    color: var(--color);
     background: var(--whitecolor);
     border: 2px solid var(--bordercolor)
 }
 
 .product-cart ul li .icon-outline:hover {
     color: var(--whitecolor);
-    background: #ed6436;
-    border-color: #ed6436
+    background: var(--color);
+    border-color: var(--color)
 }
 
 .product-payment {
@@ -666,7 +666,7 @@
 
 .product-contact h4 {
     font-size: 24px;
-    color: #ed6436
+    color: var(--color)
 }
 
 .product-contact h4 i {

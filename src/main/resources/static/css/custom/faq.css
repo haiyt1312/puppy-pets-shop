@@ -12,14 +12,14 @@
   color: var(--graycolor);
 }
 .breadcrumb li a:hover {
-  color: #ed6436;
+  color: var(--color);
   text-decoration: underline;
 }
 .breadcrumb .active {
-  color: #ed6436;
+  color: var(--color);
 }
 .breadcrumb-item + .breadcrumb-item::before {
-  color: #ed6436;
+  color: var(--color);
 }
 .single-banner {
   background: url(../../images/banner/banner4.svg);
@@ -72,11 +72,11 @@
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-  border-left: 3px solid #ed6436;
-  border-right: 3px solid #ed6436;
+  border-left: 3px solid var(--color);
+  border-right: 3px solid var(--color);
 }
 .faq-child:hover .faq-que button {
-  color: #ed6436;
+  color: var(--color);
 }
 .faq-child:last-child {
   margin-bottom: 0px;

@@ -12,27 +12,27 @@
   color: var(--graycolor);
 }
 .breadcrumb li a:hover {
-  color: #ed6436;
+  color: var(--color);
   text-decoration: underline;
 }
 .breadcrumb .active {
-  color: #ed6436;
+  color: var(--color);
 }
 .breadcrumb-item + .breadcrumb-item::before {
-  color: #ed6436;
+  color: var(--color);
 }
 .table-list {
   width: 100%;
 }
 .table-list thead tr {
-  background: #ed6436;
+  background: var(--color);
 }
 .table-list thead tr th {
   text-align: center;
   padding: 15px 25px;
   color: var(--whitecolor);
   font-weight: var(--mweight);
-  border-right: 1px solid #ed6436;
+  border-right: 1px solid var(--color);
 }
 .table-list thead tr th:first-child {
   border-radius: 3px 0px 0px 3px;
@@ -66,7 +66,7 @@
   border: 2px solid var(--bordercolor);
 }
 .table-quantity input:focus-within {
-  border-color: #ed6436;
+  border-color: var(--color);
 }
 .table-shop .btn {
   padding: 10px 25px;
@@ -82,7 +82,7 @@
   text-align: center;
   border-radius: 5px;
   margin: 3px;
-  color: #ed6436;
+  color: var(--color);
   background: var(--whitecolor);
   text-shadow: var(--tshadow);
   transition: all linear 0.3s;
@@ -93,7 +93,7 @@
 }
 .table-action a i:hover {
   color: var(--whitecolor);
-  background: #ed6436;
+  background: var(--color);
 }
 .table-desc p {
   width: 150px;
@@ -156,12 +156,12 @@
   margin-bottom: 65px;
   padding: 18px 20px 15px;
   background: var(--whitecolor);
-  border-top: 3px solid #ed6436;
+  border-top: 3px solid var(--color);
   -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 }
 .checkout-action i {
-  color: #ed6436;
+  color: var(--color);
   margin-right: 8px;
 }
 .checkout-action span {
@@ -177,7 +177,7 @@
   -o-transition: all linear 0.3s;
 }
 .checkout-action span a:hover {
-  color: #ed6436;
+  color: var(--color);
 }
 .checkout-form {
   padding: 0px 15px;
@@ -204,7 +204,7 @@
   left: 0px;
   width: 50px;
   height: 2px;
-  background: #ed6436;
+  background: var(--color);
 }
 .checkout-table {
   padding: 70px 10px;
@@ -216,7 +216,7 @@
   width: 600px;
   margin: 0 auto;
   background: var(--whitecolor);
-  border-top: 3px solid #ed6436;
+  border-top: 3px solid var(--color);
   -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 }

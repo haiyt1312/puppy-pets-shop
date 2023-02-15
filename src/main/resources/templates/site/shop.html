@@ -85,10 +85,10 @@
                   </div>
                   <div class="product-content">
                     <div class="product-name">
-                      <h6><a href="#" th:href="@{/productDetail(productId=${item.productId})}" style="font-family:Montserrat">[[${item.name}]]</a></h6>
+                      <h6><a href="#" th:href="@{/productDetail(productId=${item.productId})}" >[[${item.name}]]</a></h6>
                     </div>
                     <div class="product-price">
-                      <h6>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
+                      <h6><del>[[${#numbers.formatDecimal(item.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</del>[[${#numbers.formatDecimal(item.price - (item.price * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h6>
                       <div class="product-rating">
                         <h6><a style="color: #ff0000" href="#" th:href="@{/productDetail(productId=${item.productId})}">[[${item.discount}+ '%']]</a></h6>
                       </div>
@@ -96,7 +96,7 @@
                     <div class="product-btn">
                       <a th:href="@{/addToCart(productId=${item.productId})}">
                         <i class="fas fa-shopping-basket"></i>
-                        <span style="font-family:Montserrat">Thêm vào giỏ hàng</span></a>
+                        <span >Thêm vào giỏ hàng</span></a>
                     </div>
                   </div>
                 </div>
@@ -131,7 +131,7 @@
               <input type="text" placeholder="Email" /><button
                 class="btn btn-inline"
               >
-                <i class="fas fa-envelope"></i><span style="font-family:Montserrat">Đăng ký</span>
+                <i class="fas fa-envelope"></i><span >Đăng ký</span>
               </button>
             </form>
           </div>
