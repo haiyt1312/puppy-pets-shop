@@ -121,7 +121,8 @@
                       <th scope="col" >ID đơn hàng</th>
                       <th scope="col" >Địa chỉ</th>
                       <th scope="col" >Ngày</th>
-                      <th scope="col" >Đơn giá</th>
+                      <th scope="col" >Tổng tiền</th>
+                      <th scope="col" >Số lượng</th>
                       <th scope="col" >Trạng thái</th>
                       <th scope="col" >Tên sản phẩm</th>
                     </tr>
@@ -132,7 +133,8 @@
                       <td class="table-order"><p>[[${item[0]}]]</p></td>
                       <td class="table-date"><p>[[${item[1]}]]</p></td>
                       <td class="table-total"><p>[[${item[2]}]]</p></td>
-                      <td class="table-total"><p>[[ ${#numbers.formatDecimal(item[3] - (item[3] * item[6]/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</p></td>
+                      <td class="table-total"><p>[[ ${#numbers.formatDecimal(item[3], 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</p></td>
+                      <td class="table-total"><p>[[${item[6]}]]</p></td>
                       <td class="table-total"><p>[[${item[4]}]]</p></td>
                       <td class="table-total"><p>[[${item[5]}]]</p></td>
                     </tr>
@@ -172,31 +174,6 @@
     
     <!-- Footer -->
     <footer th:replace="~{/fragments/footer :: footer}"></footer>
-    
-    <div class="footer-bottom">
-      <div class="container">
-        <p>
-          Copyright &copy; 2023. All rights reserved by -
-          <a target="_blank" href="https://themeforest.net/user/mironcoder"
-            >Puppy Pets Shop</a
-          >
-        </p>
-        <ul class="pay-card">
-          <li>
-            <a href="#"><img src="images/pay-card/01.jpg" alt="payment-1" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/pay-card/02.jpg" alt="payment-2" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/pay-card/03.jpg" alt="payment-3" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/pay-card/04.jpg" alt="payment-4" /></a>
-          </li>
-        </ul>
-      </div>
-    </div>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/vendor/popper.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>

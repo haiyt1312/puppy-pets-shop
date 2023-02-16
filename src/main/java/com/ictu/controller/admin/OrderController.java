@@ -48,7 +48,7 @@ public class OrderController extends CommonController {
 	@GetMapping("/editorder/{orderDetailId}")
 	public String showEditOrder(@PathVariable("orderDetailId") int orderDetailId, Model model) {
 		OrderDetail orderDetail = orderDetailRepository.findById(orderDetailId)
-				.orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + orderDetailId));
+				.orElseThrow(() -> new IllegalArgumentException("Id người dùng không hợp lệ:" + orderDetailId));
 
 		model.addAttribute("orderDetail", orderDetail);
 

@@ -16,5 +16,4 @@ public interface CustomersRepository extends JpaRepository<Customer, Integer> {
 
 	@Query(value = "select * from customers where email = ?", nativeQuery = true)
 	Optional<Customer> FindByEmail(String email);
-
 }

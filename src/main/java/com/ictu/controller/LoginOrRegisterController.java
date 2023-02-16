@@ -48,8 +48,8 @@ public class LoginOrRegisterController extends CommonController {
 
 	@SuppressWarnings("unused")
 	@RequestMapping(value = "/registered")
-	public String addCourse(@Valid @ModelAttribute("customer") Customer customer, BindingResult result, ModelMap model,
-			Principal principal) {
+	public String addCustomer(@Valid @ModelAttribute("customer") Customer customer, BindingResult result,
+			ModelMap model, Principal principal) {
 
 		// check error
 		if (result.hasErrors()) {
@@ -62,9 +62,21 @@ public class LoginOrRegisterController extends CommonController {
 			return "site/loginOrRegister";
 		}
 
-		// check id login by database
+		// check tên tài khoản by database
 		if (!checkIdlogin(customer.getCustomerId())) {
 			model.addAttribute("error", "Đăng kí thất bại, Tên tài khoản này đã được sử dụng!");
+			return "site/loginOrRegister";
+		}
+
+		// check độ dài tên tài khoản
+		if (!checkLengthIdLogin(customer.getCustomerId())) {
+			model.addAttribute("error", "Đăng kí thất bại, Tên tài khoản phải từ 6 ký tự!");
+			return "site/loginOrRegister";
+		}
+
+		// check độ dài mật khẩu
+		if (!checkLengthPassword(customer.getPassword())) {
+			model.addAttribute("error", "Đăng kí thất bại, Mật khẩu phải từ 6 ký tự!");
 			return "site/loginOrRegister";
 		}
 
@@ -111,4 +123,19 @@ public class LoginOrRegisterController extends CommonController {
 		return true;
 	}
 
+	// check độ dài tên tài khoản
+	public boolean checkLengthIdLogin(String customerId) {
+		if (customerId.length() < 6) {
+			return false;
+		}
+		return true;
+	}
+
+	// check độ dài mật khẩu
+	public boolean checkLengthPassword(String password) {
+		if (password.length() < 6) {
+			return false;
+		}
+		return true;
+	}
 }
