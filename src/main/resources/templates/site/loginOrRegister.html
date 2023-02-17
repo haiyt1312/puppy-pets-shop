@@ -84,14 +84,14 @@
                 name="password"
                 value=""
                 placeholder="Mật khẩu"
-                required="required"
+                minlength="6" required title="Mật khẩu phải nhiều hơn 5 ký tự"
               />
               <button type="button">
                 <a for="hide" onclick="hidePass()">
                   <i class="eye fas fa-eye"></i>
                 </a>
               </button>
-              <small>Mật khẩu phải nhiều hơn 6 ký tự</small>
+              <small>Mật khẩu phải nhiều hơn 5 ký tự</small>
             </label>
             <label class="form-link">
               <div class="custom-control custom-checkbox">
@@ -182,15 +182,14 @@
                 th:field="*{password}"
                 type="password"
                 id="myPassRegister"
-                placeholder="Mật khẩu"
-                required="required"
+                placeholder="Mật khẩu" minlength="6" required title="Mật khẩu phải nhiều hơn 5 ký tự"
               />
               <button type="button">
                 <a for="hide" onclick="hidePass()">
                   <i class="eye fas fa-eye"></i>
                 </a>
               </button>
-              <small>Mật khẩu phải nhiều hơn 6 ký tự</small>
+              <small>Mật khẩu phải nhiều hơn 5 ký tự</small>
             </label>
             <div class="form-btn">
               <button type="submit" class="btn btn-outline">Đăng ký</button>

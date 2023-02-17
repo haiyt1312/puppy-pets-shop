@@ -68,18 +68,6 @@ public class LoginOrRegisterController extends CommonController {
 			return "site/loginOrRegister";
 		}
 
-		// check độ dài tên tài khoản
-		if (!checkLengthIdLogin(customer.getCustomerId())) {
-			model.addAttribute("error", "Đăng kí thất bại, Tên tài khoản phải từ 6 ký tự!");
-			return "site/loginOrRegister";
-		}
-
-		// check độ dài mật khẩu
-		if (!checkLengthPassword(customer.getPassword())) {
-			model.addAttribute("error", "Đăng kí thất bại, Mật khẩu phải từ 6 ký tự!");
-			return "site/loginOrRegister";
-		}
-
 		customer.setEnabled(true);
 		customer.setRoleId("0");
 		customer.setPassword(bCryptPasswordEncoder.encode(customer.getPassword()));
@@ -119,22 +107,6 @@ public class LoginOrRegisterController extends CommonController {
 			if (c.getCustomerId().equalsIgnoreCase(customerId)) {
 				return false;
 			}
-		}
-		return true;
-	}
-
-	// check độ dài tên tài khoản
-	public boolean checkLengthIdLogin(String customerId) {
-		if (customerId.length() < 6) {
-			return false;
-		}
-		return true;
-	}
-
-	// check độ dài mật khẩu
-	public boolean checkLengthPassword(String password) {
-		if (password.length() < 6) {
-			return false;
 		}
 		return true;
 	}

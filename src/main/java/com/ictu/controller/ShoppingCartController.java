@@ -3,6 +3,8 @@ package com.ictu.controller;
 import java.security.Principal;
 import java.util.Collection;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -146,7 +148,7 @@ public class ShoppingCartController extends CommonController {
 			item.setProductId(productId);
 			shoppingCartService.add(item);
 			session.setAttribute("cartItems", cartItems);
-		} 
+		}
 
 		model.addAttribute("totalCartItemWishs", wishListService.getCount());
 		model.addAttribute("totalCartItems", shoppingCartService.getCount());
@@ -232,5 +234,4 @@ public class ShoppingCartController extends CommonController {
 
 		return "site/checkout_success";
 	}
-
 }
