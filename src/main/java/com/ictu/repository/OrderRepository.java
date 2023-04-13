@@ -13,7 +13,7 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
 	@Query(value = "select * from orders where customer_id = ?1", nativeQuery = true)
 	List<Order> findByCustomerId(String id);
 
-	@Query(value = "select o.order_id, o.address, o.order_date, p.name, p.price, od.quantity, od.total_price, od.status "
+	@Query(value = "select o.order_id, o.address, o.order_date, p.name, p.price, p.discount, od.quantity, od.total_price, od.status "
 			+ "from orders o " + "left join order_details od on o.order_id = od.order_id "
 			+ "left join products p on od.product_id = p.product_id " + "where o.customer_id = ?", nativeQuery = true)
 	public List<Object[]> orderByCustomerId(String id);

@@ -61,10 +61,11 @@
               <table class="table-list">
                 <thead>
                   <tr>
-					          <th scope="col">#</th>
+                    <th scope="col">#</th>
                     <th scope="col" >Sản phẩm</th>
                     <th scope="col" >Tên</th>
                     <th scope="col" >Giá</th>
+                    <th scope="col" >Khuyến mãi</th>
                     <th scope="col" >Số lượng</th>
                     <th scope="col" >Tổng</th>
                     <th scope="col"></th>
@@ -77,7 +78,9 @@
                       <img th:src="@{'/loadImage?imageName='+${item.product.image}}" alt="product" />
                     </td>
                     <td class="table-name"><h5 >[[${item.product.name}]]</h5></td>
-                    <td class="table-price"><h5>[[ ${#numbers.formatDecimal(item.product.price - (item.product.price * item.product.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h5></td>
+                    <td class="table-price"><h5>[[ ${#numbers.formatDecimal(item.product.price, 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h5></td>
+                    <!-- <td class="table-price"><h5>[[ ${#numbers.formatDecimal(item.product.price - (item.product.price * item.product.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ '₫']]</h5></td> -->
+                    <td class="table-name"><h5 >[[${item.product.discount} + '%']]</h5></td>
                     <td class="table-action" style="color: black; font-weight: bold;">
                       <a th:href="@{/addToCart(productId=${item.productId})}" style="color: var(--color);"><i class="fas fa-angle-up"></i></a>
                       <h5>[[${item.quantity}]]</h5>

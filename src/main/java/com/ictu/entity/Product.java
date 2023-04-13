@@ -54,7 +54,7 @@ public class Product implements Serializable {
 	@Column(name = "entered_date")
 	private Date enteredDate;
 
-	@Column(name = "description")
+	@Column(name = "description", length=512)
 	private String description;
 
 	@ManyToOne
